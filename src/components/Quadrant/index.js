@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const QuadrantName = styled.h2`
     color: ${props => props.color || "black"};
-    text-decoration: underline;
     font-style: normal;
     font-family: Oxygen;
     font-weight: 700;

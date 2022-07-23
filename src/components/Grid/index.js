@@ -18,10 +18,10 @@ class Grid extends React.Component{
 
     render() {
         return <GridContainer>
-            <Quadrant name="DO" color="blue"></Quadrant>
-            <Quadrant name="PLAN"></Quadrant>
-            <Quadrant name="DELEGATE"></Quadrant>
-            <Quadrant name="PUT OFF"></Quadrant>
+            <Quadrant name="DO"       color="#94D564"></Quadrant>
+            <Quadrant name="PLAN"     color="#57BFCA"></Quadrant>
+            <Quadrant name="DELEGATE" color="#EF965D"></Quadrant>
+            <Quadrant name="PUT OFF"  color="#EC635D"></Quadrant>
         </GridContainer>
     }
 }

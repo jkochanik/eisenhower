@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 const ColorBlock = styled.div`
-    border-color: ${props => props.fillColor || "black"};
-    min-height: 200px;
+    border: 2px ${props => props.fillColor || "black"} solid;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+    min-height: 400px;
+    min-width: min-content;
+    margin: 10px;
     `
 ;
 
