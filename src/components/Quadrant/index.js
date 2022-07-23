@@ -2,11 +2,16 @@ import React from 'react';
 import ColorBlock from "./Block";
 import styled from "styled-components";
 
-const SectionName = styled.text`
-    color: white;
+const QuadrantName = styled.h2`
+    color: ${props => props.color || "black"};
+    text-decoration: underline;
+    font-style: normal;
+    font-family: Oxygen;
+    font-weight: 700;
+  
 `;
 
-class SectionBlock extends React.Component{
+class Quadrant extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -17,9 +22,9 @@ class SectionBlock extends React.Component{
 
     render() {
         return <ColorBlock fillColor={this.props.color}>
-            <SectionName> {this.props.name} </SectionName>
+            <QuadrantName color={this.props.color}> {this.props.name} </QuadrantName>
         </ColorBlock>
     }
 }
 
-export { SectionBlock }
+export { Quadrant }

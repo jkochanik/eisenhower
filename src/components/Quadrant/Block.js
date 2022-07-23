@@ -1,18 +1,11 @@
 import styled from 'styled-components'
 
 const ColorBlock = styled.div`
-    background-color: ${props => props.fillColor || "blue"};
-    flex-grow: 1;
-    height: 800px;
-    display: grid;
+    border-color: ${props => props.fillColor || "black"};
+    min-height: 200px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid black;
-
-    &:hover {
-      background-color: ${(props) => props.hoverFillColor || "white"};
-    }
+    align-content: center;
     `
 ;
 
