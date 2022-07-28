@@ -3,7 +3,9 @@ import {Grid} from "./components/Grid";
 
 function App() {
   return (
-    <Grid></Grid>
+    <div>
+      <Grid></Grid>
+    </div>
   );
 }
 
