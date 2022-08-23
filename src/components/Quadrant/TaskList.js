@@ -1,5 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import { Task } from "../Task";
+
+
+function listTasks(list) {
+    return list.map((task) =>
+        <Task name={task}></Task>
+    );
+}
 
 class TaskList extends React.Component {
     list = ["shit", "piss","fuck","cunt","cocksucker","motherfucker","tits"];
@@ -10,19 +17,13 @@ class TaskList extends React.Component {
         }
     };
 
-    listTasks() {
-        return this.list.map((task) =>
-            <li>{task}</li>
-        );
-    }
+
 
 
     render() {
         return (
             <div>
-                <ol>
-                    {this.listTasks()}
-                </ol>
+                {listTasks()}
             </div>
         );
     }
