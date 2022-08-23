@@ -23,7 +23,7 @@ class TaskList extends React.Component {
     render() {
         return (
             <div>
-                {listTasks()}
+                {listTasks(this.list)}
             </div>
         );
     }
