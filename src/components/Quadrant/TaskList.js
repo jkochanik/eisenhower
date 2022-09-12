@@ -1,5 +1,6 @@
 import React from "react";
 import { Task } from "../Task";
+import {AddTask} from "../../AddTask";
 
 
 function listTasks(list) {
@@ -9,7 +10,7 @@ function listTasks(list) {
 }
 
 class TaskList extends React.Component {
-    list = ["shit", "piss","fuck","cunt","cocksucker","motherfucker","tits"];
+    list = [];
     constructor(props) {
         super(props);
         this.state = {
@@ -24,6 +25,7 @@ class TaskList extends React.Component {
         return (
             <div>
                 {listTasks(this.list)}
+                <AddTask></AddTask>
             </div>
         );
     }
