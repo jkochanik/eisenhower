@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 class TaskList extends React.Component {
-    list = ["shit", "piss","fuck","cunt","cocksucker","motherfucker","tits"];
+    list = ["test", "test2"];
     constructor(props) {
         super(props);
         this.state = {
