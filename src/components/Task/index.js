@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Draggable} from 'react-beautiful-dnd';
 
 const TBlock = styled.div`
   display: flex;
@@ -32,9 +33,17 @@ class Task extends React.Component {
 
     render() {
         return (
-            <TBlock>
-                <text>{this.props.name}</text>
-            </TBlock>
+            <Draggable DraggableId={this.props.column.id} index={this.props.index}>
+                {provided => (
+                    <TBlock
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        innerRef={provided.innerRef}
+                    >
+                        <text>{this.props.name}</text>
+                    </TBlock>
+                )}
+            </Draggable>
         );
     }
 }

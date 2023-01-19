@@ -2,6 +2,7 @@ import React from 'react';
 import ColorBlock from "./Block";
 import styled from "styled-components";
 import {TaskList} from "./TaskList";
+import {DragDropContext} from "react-beautiful-dnd";
 
 
 const QuadrantName = styled.h2`
@@ -21,11 +22,17 @@ class Quadrant extends React.Component{
         }
     }
 
+    onDragEnd = result => {
+        //TODO Reoreder Column
+    }
+
     render() {
-        return <ColorBlock fillColor={this.props.color}>
-            <QuadrantName color={this.props.color}> {this.props.name} </QuadrantName>
-            <TaskList/>
-        </ColorBlock>
+        return <DragDropContext onDragEnd={this.onDragEnd}>
+         <ColorBlock fillColor={this.props.color}>
+                <QuadrantName color={this.props.color}> {this.props.name} </QuadrantName>
+                <TaskList/>
+            </ColorBlock>
+        </DragDropContext>
     }
 }
 
