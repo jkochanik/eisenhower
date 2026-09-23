@@ -5,7 +5,10 @@ const ColorBlock = styled.div`
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* stretch (not center) so the TaskList below can fill the full width/
+       height of the quadrant — otherwise an empty TaskList shrinks to zero
+       size and there's nothing to drop a card onto. */
+    align-items: stretch;
     min-height: 400px;
     min-width: min-content;
     margin: 10px;
